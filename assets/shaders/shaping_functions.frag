@@ -77,3 +77,29 @@ void main() {
 //     the function will interpolate the value between the defined range
 
 //   - the parameters are begin range, end range and the value to interpolate
+
+// Accessing Elements of a Vector
+
+//   - there are multiple ways to access elements of vectors in GLSL
+
+//   - e.g. vec4 vector;
+
+// vector[0] = vector.r = vector.x = vector.s; they all reference the same element of a Vector
+
+// vector[1] = vector.g = vector.y = vector.t;
+
+// vector[2] = vector.b = vector.z = vector.p;
+
+// vector[3] = vector.a = vector.w = vector.q;
+
+// swizzle
+
+//   - the ability to access elements by name in any order
+
+//   - e.g.
+
+//          vec4 vector = vec4(1.0, 2.0, 3.0, 4.0); 
+
+//          vec4.zywx == vec4(3.0, 2.0, 4.0, 1.0);
+
+//  - an element can also be accessed more than once
