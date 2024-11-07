@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:the_book_of_shaders_in_flutter/chapters/algorithmicDrawing/shapingFunctions/shaping_functions_shader.dart';
 import 'package:the_book_of_shaders_in_flutter/chapters/gettingStarted/fragmentCoordinates/fragment_coordinates_shader.dart';
 import 'package:the_book_of_shaders_in_flutter/chapters/gettingStarted/helloWorld/hello_world_shader.dart';
 import 'package:the_book_of_shaders_in_flutter/chapters/gettingStarted/uniforms/uniforms_and_time_shader.dart';
@@ -10,6 +11,7 @@ import 'package:the_book_of_shaders_in_flutter/chapters/gettingStarted/uniforms/
 late FragmentProgram helloWorldFragmentProgram;
 late FragmentProgram uniformsFragmentProgram;
 late FragmentProgram fragCoordsFragmentProgram;
+late FragmentProgram shapingFunctionsFragmentProgram;
 
 Future<void> main() async {
   helloWorldFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/hello_world.frag');
@@ -17,6 +19,8 @@ Future<void> main() async {
   uniformsFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/uniforms.frag');
 
   fragCoordsFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/fragment_coordinates.frag');
+
+  shapingFunctionsFragmentProgram = await FragmentProgram.fromAsset('assets/shaders/shaping_functions.frag');
 
   runApp(const MainApp());
 }
@@ -31,7 +35,9 @@ class MainApp extends StatelessWidget {
 
       //home: UniformsAndTimeShader(shader: uniformsFragmentProgram.fragmentShader()), // Lesson 2
 
-      home: FragmentCoordinatesShader(shader: fragCoordsFragmentProgram.fragmentShader()), // Lesson 3
+      // home: FragmentCoordinatesShader(shader: fragCoordsFragmentProgram.fragmentShader()), // Lesson 3
+
+      home: ShapingFunctionsShader(shader: shapingFunctionsFragmentProgram.fragmentShader()), // Lesson 4
     );
   }
 }
