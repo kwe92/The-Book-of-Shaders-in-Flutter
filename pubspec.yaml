@@ -61,6 +61,8 @@ flutter:
     - assets/shaders/uniforms.frag
     - assets/shaders/fragment_coordinates.frag
     - assets/shaders/shaping_functions.frag
+    - assets/shaders/colors_and_gradients.frag
+    - assets/shaders/custom_shaping_functions.frag
 
   # To add assets to your application, add an assets section, like this:
   # assets:
