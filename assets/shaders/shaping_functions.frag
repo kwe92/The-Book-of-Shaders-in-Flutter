@@ -39,7 +39,7 @@ void main() {
     //y = floor(x); // nearest integer less than or equal to x
     //y = sign(x);  // extract the sign of x
     //y = abs(x);   // return the absolute value of x
-    y = clamp(x,0.0,1.0); // constrain x to lie between 0.0 and 1.0
+    y = clamp(pixels.x,0.0,1.0); // constrain x to lie between 0.0 and 1.0
     //y = min(0.0,x);   // return the lesser of x and 0.0
     //y = max(0.0,x);   // return the greater of x and 0.0 
 
@@ -52,7 +52,6 @@ void main() {
     color = (1.0 - pct) * color + pct * vec3(0.0, 1.0, 0.0);
 
     fragColor = vec4(color, 1.0);
-
 
 }
 
